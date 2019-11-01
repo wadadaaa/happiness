@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
+    title: `Тест на жызу, от экстаза до памагити:`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
   },
@@ -11,6 +11,14 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `r4oa76q0o6f4`,
+        // Learn about environment variables: https://gatsby.dev/env-vars
+        accessToken: `dK6f5Svkvzi4MTzNstWON8yPlIRk5ftFkzAyWz_EPBE`,
       },
     },
     `gatsby-transformer-sharp`,

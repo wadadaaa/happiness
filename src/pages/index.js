@@ -1,8 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
-
 import Layout from "../components/layout"
-//import Image from "../components/image"
 import SEO from "../components/seo"
 
 const IndexPage = ({ data }) => {
@@ -14,13 +11,17 @@ const IndexPage = ({ data }) => {
       <SEO title="Home" />
       <div style={{ marginBottom: `1.45rem` }}>
         <div className="headLiner" style={{float:`right`}}>
-        <p style={{backgroundColor:'#ff5678', width: `415px`, padding: `15px`}}>Быстрый чекап, из на научных исследований</p>
+        <p style={{backgroundColor:'#ff5678', width: `240px`, padding: `15px`, position: `relative`, left:`80px`}}>Быстрый чекап от науки</p>
           <img src={image[0].pic.file.url} alt="img" width='300px' height='300px' style={{margin: `50px`}}/>
           </div>
         <ul>
           {advices.map((advice, index) => {
             return <li key={index}>{advice.description}</li>
           })}</ul>
+        <p style={{font: `italic`}}>ТИПА ИТОГИ.</p>
+        <p><b>Cтрайк из всех пунктов?</b> -  <span role="img" aria-label="rocket">🚀</span> поздравляю, осознанный счастливчик!</p>
+        <p><b>Меньше трети пунктов?</b> -  <span role="img" aria-label="hammer">🔨</span> теперь знаешь, над чем работать!</p>
+        <p><b>Вроде все выполняешь, но настроение не оч?</b> -  <span role="img" aria-label="sos">🆘</span> возможно, тебе нужна помощь психолога.</p>
         {/* <div>{conclusion[0].childContentfulConclusionDescriptionRichTextNode.description}</div> */}
       </div>
     </Layout>
